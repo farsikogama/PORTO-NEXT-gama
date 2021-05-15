@@ -10,9 +10,15 @@ const Section = styled.section`
     props.jumbotron
       ? css`
           min-height: 450px;
+          margin-top: -60px;
+          display: flex;
+          justify-content: center;
+          align-items: center;
         `
       : css`
           min-height: 600px;
+          display: flex;
+          justify-content: center;
         `}
   ${props =>
     props.dark
@@ -22,14 +28,18 @@ const Section = styled.section`
       : css`
           background-color: #212229;
         `}
-  color: white;
   ${props =>
-    props.align &&
-    css`
-      display: flex;
-      justify-content: center;
-      align-items: center;
-    `}
+    props.align
+      ? css`
+          display: flex;
+          justify-content: center;
+          align-items: center;
+        `
+      : css`
+          display: flex;
+          justify-content: center;
+        `}
+    color: white;
 `
 const CardWrapper = styled.div`
   margin: auto;
@@ -40,6 +50,39 @@ const CardWrapper = styled.div`
   flex-wrap: wrap;
   width: 80vw;
   height: 550px;
+`
+const ContainerColumn = styled.div`
+  display: flex;
+  flex-direction: column;
+  min-width: 25vw;
+  text-align: left;
+`
+const ContainerRow = styled.div`
+  display: flex;
+  flex-direction: column;
+  text-align: left;
+  min-width: 25vw;
+`
+const Heading = styled.h1`
+  font-size: calc(1rem + 4vw);
+  margin-bottom: 30px;
+  font-family: 'Lexend', sans-serif;
+  font-weight: 600;
+  line-height: 65px;
+`
+const Heading2 = styled.h1`
+  font-size: calc(0.5rem + 2vw);
+  font-family: 'Lexend', sans-serif;
+  font-weight: 600;
+  min-width: 30vw;
+  margin-bottom: 15px;
+`
+const Heading3 = styled.h1`
+  font-size: calc(0.5rem + 1vw);
+  font-family: 'Lexend', sans-serif;
+  font-weight: 400;
+  width: 30vw;
+  margin-bottom: 20px;
 `
 
 export default function Home() {
@@ -53,50 +96,78 @@ export default function Home() {
       <main>
         {/* Jumbotron */}
         <Section id='home' className='text-center' jumbotron={true}>
-          <img src='img/farsiko.jpg' className='rounded-circle mt-5' />
-          <h1>Farsiko Gama</h1>
-          <p>Story Teller | FullStack Web Developer | Illustrator</p>
+          <ContainerColumn>
+            <img src='img/farsiko.jpg' className='rounded-circle my-5 mx-5' />
+          </ContainerColumn>
+
+          <ContainerColumn>
+            <Heading>Farsiko Gama</Heading>
+            <Heading3>
+              Story Teller, Full Stack Web Developer, and Illustrator based in
+              Yogyakarta
+            </Heading3>
+          </ContainerColumn>
         </Section>
         {/* Jumbotron */}
 
         {/* Skills */}
-        <Section id='skills' className='text-center' dark={true} align={true}>
-          <h1 className='text-center'>Skill</h1>
-          <h3>Full Stack Development</h3>
-          <h4>React Js, Javascript, HTML, CSS</h4>
-          <h4>Express, postgreSQL, Node Js, ORM,</h4>
-          <h3>Project Management</h3>
+        <Section id='skills' dark={true}>
+          <Heading2 className='mt-5'>Skills</Heading2>
+          <ContainerColumn className='mt-5'>
+            <Heading3 style={{ fontWeight: 'bolder' }}>
+              Full Stack Development
+            </Heading3>
+            <p>PostgreSQL</p>
+            <p>Express Js</p>
+            <p>React Js</p>
+            <p>Node Js</p>
+          </ContainerColumn>
+          <ContainerColumn className='mt-5'>
+            <Heading3 style={{ fontWeight: 'bolder' }}>Other</Heading3>
+            <p>TypeScript</p>
+            <p>Styled Components</p>
+            <p>Next Js</p>
+            <p>Adobe Ilustrator & Photoshop</p>
+          </ContainerColumn>
         </Section>
         {/* Skills */}
 
         {/* Portofolio */}
         <Section id='portos' className='text-center'>
-          Portofolio
-          <CardWrapper>
-            <Card></Card>
-            <Card></Card>
-            <Card></Card>
-          </CardWrapper>
+          <ContainerColumn className='text-center mt-5' alignCenter={true}>
+            <Heading2>Portofolio</Heading2>
+            <CardWrapper>
+              <Card></Card>
+              <Card></Card>
+              <Card></Card>
+            </CardWrapper>
+          </ContainerColumn>
         </Section>
         {/* Portofolio */}
 
         {/* About */}
-        <Section id='about' className='text-center' dark={true} align={true}>
-          About
-          <h3>Education</h3>
-          <h4>Operation Management, Universitas Indonesia</h4>
-          <h4>Full Stack Web Development, Binar Academy </h4>
-          <h3>Past Job</h3>
-          <h4>Marketing Analytics, Gojek</h4>
+        <Section id='about' dark={true}>
+          <Heading2 className='mt-5'>About</Heading2>
+          <ContainerColumn className='mt-5'>
+            <Heading3>Education</Heading3>
+            <p>Operation Management, Universitas Indonesia</p>
+            <p>Full Stack Web Development, Binar Academy </p>
+          </ContainerColumn>
+          <ContainerColumn className='mt-5'>
+            <Heading3>Past Job</Heading3>
+            <p>Marketing Analytics, Gojek</p>
+          </ContainerColumn>
         </Section>
         {/* About */}
 
         {/* Contact */}
-        <Section id='contact' className='text-center' align={true}>
-          Reach Me on
-          <h3>Linked In</h3>
-          <h3>Email</h3>
-          <h3>Whats App</h3>
+        <Section id='contact' align={true}>
+          <ContainerColumn>
+            <Heading2>Reach Me on</Heading2>
+            <Heading3>Linked In</Heading3>
+            <Heading3>Email</Heading3>
+            <Heading3>Whats App</Heading3>
+          </ContainerColumn>
         </Section>
         {/* Contact */}
       </main>
