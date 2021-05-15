@@ -1,5 +1,8 @@
+@import url('https://fonts.googleapis.com/css2?family=Lexend:wght@400;500;600;700&display=swap');
+
 html,
 body {
+  color: white;
   padding: 0;
   margin: 0;
   font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen,
@@ -13,4 +16,10 @@ a {
 
 * {
   box-sizing: border-box;
+}
+
+.tes {
+  font-family: 'Lexend', sans-serif;
+  font-weight: 700;
+  line-height: inherit;
 }
