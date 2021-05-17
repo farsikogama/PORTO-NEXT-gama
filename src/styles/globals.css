@@ -22,4 +22,5 @@ a {
   font-family: 'Lexend', sans-serif;
   font-weight: 700;
   line-height: inherit;
+  justify-content: start;
 }
