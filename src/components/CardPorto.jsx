@@ -1,5 +1,5 @@
 import styled from 'styled-components'
-import { device } from '../components/MediaQueries'
+import { device } from './MediaQueries'
 
 // import components
 import Image from 'next/image'
@@ -17,7 +17,7 @@ const CardDiv = styled.div`
     background: #282931;
   }
   @media ${device.mobileS} {
-    height: 35vh;
+    height: 25vh;
     flex-basis: 70%;
   }
   @media ${device.mobileM} {
@@ -25,9 +25,13 @@ const CardDiv = styled.div`
   @media ${device.mobileL} {
   }
   @media ${device.tablet} {
-    flex-basis: 30%;
+    flex-basis: 40%;
   }
   @media ${device.laptop} {
+    height: 30vh;
+    flex-basis: 30%;
+  }
+  @media ${device.laptopL} {
   }
 `
 

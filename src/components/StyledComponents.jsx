@@ -61,26 +61,48 @@ export const Section = styled.section`
     color: white;
 `
 export const CardWrapper = styled.div`
-  margin-bottom: 5vh;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  flex-wrap: wrap;
+  ${props =>
+    props.porto
+      ? css`
+          margin-bottom: 5vh;
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          flex-wrap: wrap;
 
-  @media ${device.mobileS} {
-    margin-top: 10px;
-    width: 90vw;
-    text-align: center;
-  }
-  @media ${device.mobileM} {
-    width: 80vw;
-  }
-  @media ${device.mobileL} {
-  }
-  @media ${device.tablet} {
-  }
-  @media ${device.laptop} {
-  }
+          @media ${device.mobileS} {
+            margin-top: 10px;
+            width: 90vw;
+            text-align: center;
+          }
+          @media ${device.mobileM} {
+            width: 80vw;
+          }
+          @media ${device.mobileL} {
+          }
+          @media ${device.tablet} {
+          }
+          @media ${device.laptop} {
+          }
+        `
+      : css`
+          display: flex;
+          align-items: center;
+          flex-wrap: wrap;
+          @media ${device.mobileS} {
+            justify-content: center;
+          }
+          @media ${device.mobileM} {
+          }
+          @media ${device.mobileL} {
+          }
+          @media ${device.tablet} {
+          }
+          @media ${device.laptop} {
+            justify-content: left;
+            width: 30vw;
+          }
+        `}
 `
 export const ContainerColumn = styled.div`
   display: flex;
@@ -103,7 +125,6 @@ export const ContainerColumn = styled.div`
     flex-basis: 25%;
   }
 `
-
 export const Heading = styled.h1`
   margin-bottom: 30px;
   font-family: 'Lexend', sans-serif;
@@ -118,7 +139,7 @@ export const Heading = styled.h1`
   @media ${device.mobileL} {
   }
   @media ${device.tablet} {
-    font-size: calc(1rem + 4vw);
+    font-size: calc(1rem + 2vw);
   }
   @media ${device.laptop} {
   }
@@ -137,9 +158,10 @@ export const Heading2 = styled.p`
   @media ${device.mobileL} {
   }
   @media ${device.tablet} {
-    text-align: left;
+    flex-basis: 60%;
   }
   @media ${device.laptop} {
+    text-align: left;
     font-size: calc(0.5rem + 2vw);
     flex-basis: 30%;
   }
@@ -149,7 +171,7 @@ export const Heading3 = styled.p`
   font-weight: 400;
   margin-bottom: 20px;
   @media ${device.mobileS} {
-    font-size: calc(0.5rem + 1vw);
+    font-size: calc(0.75rem + 1vw);
     text-align: center;
   }
   @media ${device.mobileM} {
