@@ -68,10 +68,7 @@ export default function Home() {
           <ContainerColumn>
             <Heading3 style={{ fontWeight: 'bolder' }}>Other Skills</Heading3>
             <CardWrapper>
-              <CardList
-                image='/img/icon/logo-github.png'
-                text='Git Hub'
-              ></CardList>
+              <CardList image='/img/icon/logo-git.png' text='Git'></CardList>
               <CardList
                 image='/img/icon/logo-ts.png'
                 text='Typescript'
@@ -140,28 +137,28 @@ export default function Home() {
               <CardList
                 image='/img/icon/logo-ui.png'
                 text='Operation Management, Universitas Indonesia'
-              ></CardList>
+              />
               <CardList
                 image='/img/icon/logo-binar.png'
                 text='Full Stack Web Development, Binar Academy'
-              ></CardList>
+              />
             </CardWrapper>
           </ContainerColumn>
           <ContainerColumn className='mt-5'>
             <Heading3 style={{ fontWeight: 'bolder' }}>Experiences</Heading3>
             <CardWrapper>
               <CardList
-                image='/img/icon/logo-prof.png'
-                text='Front End Tutor, Superprof'
-              ></CardList>
-              <CardList
                 image='/img/icon/logo-gojek.png'
                 text='Marketing-Analyst, Gojek'
-              ></CardList>
+              />
+              <CardList
+                image='/img/icon/logo-prof.png'
+                text='Front End Tutor, Superprof'
+              />
               <CardList
                 image='/img/icon/logo-maersk.png'
                 text='Care Business Partner, Maersk'
-              ></CardList>
+              />
             </CardWrapper>
           </ContainerColumn>
         </Section>
@@ -172,18 +169,12 @@ export default function Home() {
           <ContainerColumn>
             <Heading2>Reach Me on</Heading2>
             <CardWrapper>
-              <CardList
-                image='/img/icon/logo-github.png'
-                text='@farsikogama'
-              ></CardList>
-              <CardList
-                image='/img/icon/logo-linked.png'
-                text='Farsiko Gama'
-              ></CardList>
+              <CardList image='/img/icon/logo-github.png' text='@farsikogama' />
+              <CardList image='/img/icon/logo-linked.png' text='Farsiko Gama' />
               <CardList
                 image='/img/icon/logo-email.png'
                 text='farsikogama@gmail.com'
-              ></CardList>
+              />
             </CardWrapper>
           </ContainerColumn>
         </Section>
