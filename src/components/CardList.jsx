@@ -10,7 +10,7 @@ const CardDiv = styled.div`
   align-items: center;
   padding: 5px;
   @media ${device.mobileS} {
-    margin: 1rem;
+    margin: 0.75rem;
     flex-direction: column;
     width: 45vw;
     padding: 15px;
@@ -29,7 +29,7 @@ const CardDiv = styled.div`
     flex-basis: 40%;
   }
   @media ${device.laptop} {
-    padding: 5px;
+    padding: 3px;
     flex-basis: 70%;
   }
   @media ${device.laptopL} {

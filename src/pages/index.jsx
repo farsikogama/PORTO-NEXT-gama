@@ -70,6 +70,10 @@ export default function Home() {
             <Heading3 style={{ fontWeight: 'bolder' }}>Other Skills</Heading3>
             <CardWrapper>
               <CardList
+                image='/img/icon/logo-github.png'
+                text='Git Hub'
+              ></CardList>
+              <CardList
                 image='/img/icon/logo-ts.png'
                 text='Typescript'
               ></CardList>
@@ -170,16 +174,16 @@ export default function Home() {
             <Heading2>Reach Me on</Heading2>
             <CardWrapper>
               <CardList
+                image='/img/icon/logo-github.png'
+                text='@farsikogama'
+              ></CardList>
+              <CardList
                 image='/img/icon/logo-linked.png'
                 text='Farsiko Gama'
               ></CardList>
               <CardList
                 image='/img/icon/logo-email.png'
                 text='farsikogama@gmail.com'
-              ></CardList>
-              <CardList
-                image='/img/icon/logo-prof.png'
-                text='Farsiko Gama'
               ></CardList>
             </CardWrapper>
           </ContainerColumn>
