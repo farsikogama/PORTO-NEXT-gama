@@ -22,3 +22,7 @@ a:visited {
 * {
   box-sizing: border-box;
 }
+
+.navBg {
+  background: #212229;
+}
