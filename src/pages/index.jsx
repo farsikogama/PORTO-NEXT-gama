@@ -40,7 +40,7 @@ export default function Home() {
 
         {/* Skills */}
         <Section id='skills' dark={true}>
-          <Heading2>Skills</Heading2>
+          <Heading2>Proficiencies</Heading2>
           <ContainerColumn>
             <Heading3 style={{ fontWeight: 'bolder' }}>
               Full Stack Development
@@ -93,12 +93,21 @@ export default function Home() {
           <ContainerColumn>
             <Heading2 className='text-center'>Portofolio</Heading2>
             <CardWrapper porto={true}>
-              <CardPorto></CardPorto>
-              <CardPorto></CardPorto>
-              <CardPorto></CardPorto>
-              <CardPorto></CardPorto>
-              <CardPorto></CardPorto>
-              <CardPorto></CardPorto>
+              <CardPorto
+                title='Game Center'
+                href='https://binar-gamecenter-next.herokuapp.com/'
+                bg='/img/porto/gamecenter.JPG'
+              />
+              <CardPorto
+                title='Pokedex'
+                href='https://gama-pokedex.herokuapp.com/'
+                bg='/img/porto/pokemon.png'
+              />
+              <CardPorto
+                title='Social Media UI Clone'
+                href='https://binar-gamecenter-next.herokuapp.com/'
+                bg='/img/porto/sosmed.JPG'
+              />
             </CardWrapper>
           </ContainerColumn>
         </Section>
