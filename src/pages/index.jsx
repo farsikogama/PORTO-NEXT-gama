@@ -121,8 +121,12 @@ export default function Home() {
             </CardWrapper>
           </ContainerColumn>
           <ContainerColumn className='mt-5'>
-            <Heading3 style={{ fontWeight: 'bolder' }}>Recent Job</Heading3>
+            <Heading3 style={{ fontWeight: 'bolder' }}>Experiences</Heading3>
             <CardWrapper>
+              <CardList
+                image='/img/icon/logo-prof.png'
+                text='Front End Tutor, Superprof'
+              ></CardList>
               <CardList
                 image='/img/icon/logo-gojek.png'
                 text='Marketing-Analyst, Gojek'
