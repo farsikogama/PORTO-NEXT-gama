@@ -1,14 +1,16 @@
 import Head from 'next/head'
-import Link from 'next/link'
 
 // import components
-import Card from '../components/Card'
+import CardPorto from '../components/CardPorto'
+import CardList from '../components/CardList'
+import Img from 'next/image'
 
 // styling
 import {
   Section,
   CardWrapper,
   ContainerColumn,
+  RoundedDiv,
   Heading,
   Heading2,
   Heading3,
@@ -26,14 +28,13 @@ export default function Home() {
         {/* Jumbotron */}
         <Section id='home' className='text-center' jumbotron={true}>
           <ContainerColumn>
-            <img src='img/farsiko.jpg' className='rounded-circle my-5 mx-5' />
+            <RoundedDiv />
           </ContainerColumn>
 
           <ContainerColumn>
             <Heading>Farsiko Gama</Heading>
             <Heading3>
-              Story Teller, Full Stack Web Developer, and Illustrator based in
-              Yogyakarta
+              Web Developer | Story Teller | Illustrator based in Yogyakarta
             </Heading3>
           </ContainerColumn>
         </Section>
@@ -41,22 +42,54 @@ export default function Home() {
 
         {/* Skills */}
         <Section id='skills' dark={true}>
-          <Heading2>Skills</Heading2>
+          <Heading2>Proficiencies</Heading2>
           <ContainerColumn>
             <Heading3 style={{ fontWeight: 'bolder' }}>
               Full Stack Development
             </Heading3>
-            <p>PostgreSQL</p>
-            <p>Express Js</p>
-            <p>React Js</p>
-            <p>Node Js</p>
+            <CardWrapper>
+              <CardList
+                image='/img/icon/logo-postgres.png'
+                text='PostgreSQL'
+              ></CardList>
+              <CardList
+                image='/img/icon/logo-express.png'
+                text='Express Js'
+              ></CardList>
+              <CardList
+                image='/img/icon/logo-react.png'
+                text='React Js'
+              ></CardList>
+              <CardList
+                image='/img/icon/logo-node.png'
+                text='Node Js'
+              ></CardList>
+            </CardWrapper>
           </ContainerColumn>
           <ContainerColumn>
-            <Heading3 style={{ fontWeight: 'bolder' }}>Other</Heading3>
-            <p>TypeScript</p>
-            <p>Styled Components</p>
-            <p>Next Js</p>
-            <p>Adobe Ilustrator & Photoshop</p>
+            <Heading3 style={{ fontWeight: 'bolder' }}>Other Skills</Heading3>
+            <CardWrapper>
+              <CardList
+                image='/img/icon/logo-github.png'
+                text='Git Hub'
+              ></CardList>
+              <CardList
+                image='/img/icon/logo-ts.png'
+                text='Typescript'
+              ></CardList>
+              <CardList
+                image='/img/icon/logo-styled.png'
+                text='Styled Components'
+              ></CardList>
+              <CardList
+                image='/img/icon/logo-next.png'
+                text='Next Js'
+              ></CardList>
+              <CardList
+                image='/img/icon/logo-adobe.png'
+                text='Adobe ( Ai & Ps )'
+              ></CardList>
+            </CardWrapper>
           </ContainerColumn>
         </Section>
         {/* Skills */}
@@ -65,13 +98,35 @@ export default function Home() {
         <Section id='portos' className='text-center'>
           <ContainerColumn>
             <Heading2 className='text-center'>Portofolio</Heading2>
-            <CardWrapper>
-              <Card></Card>
-              <Card></Card>
-              <Card></Card>
-              <Card></Card>
-              <Card></Card>
-              <Card></Card>
+            <CardWrapper porto={true}>
+              <CardPorto
+                title='Game Center'
+                href='https://binar-gamecenter-next.herokuapp.com/'
+                bg='/img/porto/gamecenter.JPG'
+                line1='Team Project'
+                line2='Build with Next Js, Redux, Express, JWT, Media Handling, Bootstrap'
+                line3='Role - Frontend Lead & Authentication'
+                line4='see more'
+              />
+              <CardPorto
+                title='Pokedex'
+                href='https://gama-pokedex.herokuapp.com/'
+                bg='/img/porto/pokemon.png'
+                line1='Personal Project'
+                line2='Build with Next Js, Typescript, Pokemon API, Styled Components, Pure CSS'
+                line3='Role - Frontend'
+                line4='see more'
+              />
+
+              <CardPorto
+                title='Instagram UI Clone'
+                href='https://gama-pokedex.herokuapp.com/'
+                // bg='/img/porto/pokemon.png'
+                line1='On progress'
+                line2=''
+                line3=''
+                line4='see more'
+              />
             </CardWrapper>
           </ContainerColumn>
         </Section>
@@ -82,12 +137,33 @@ export default function Home() {
           <Heading2 className='mt-5'>About</Heading2>
           <ContainerColumn className='mt-5'>
             <Heading3 style={{ fontWeight: 'bolder' }}>Education</Heading3>
-            <p>Operation Management, Universitas Indonesia</p>
-            <p>Full Stack Web Development, Binar Academy </p>
+            <CardWrapper>
+              <CardList
+                image='/img/icon/logo-ui.png'
+                text='Operation Management, Universitas Indonesia'
+              ></CardList>
+              <CardList
+                image='/img/icon/logo-binar.png'
+                text='Full Stack Web Development, Binar Academy'
+              ></CardList>
+            </CardWrapper>
           </ContainerColumn>
           <ContainerColumn className='mt-5'>
-            <Heading3 style={{ fontWeight: 'bolder' }}>Recent Job</Heading3>
-            <p>Marketing Analytics, Gojek</p>
+            <Heading3 style={{ fontWeight: 'bolder' }}>Experiences</Heading3>
+            <CardWrapper>
+              <CardList
+                image='/img/icon/logo-prof.png'
+                text='Front End Tutor, Superprof'
+              ></CardList>
+              <CardList
+                image='/img/icon/logo-gojek.png'
+                text='Marketing-Analyst, Gojek'
+              ></CardList>
+              <CardList
+                image='/img/icon/logo-maersk.png'
+                text='Care Business Partner, Maersk'
+              ></CardList>
+            </CardWrapper>
           </ContainerColumn>
         </Section>
         {/* About */}
@@ -96,9 +172,20 @@ export default function Home() {
         <Section id='contact' align={true}>
           <ContainerColumn>
             <Heading2>Reach Me on</Heading2>
-            <Heading3>Linked In</Heading3>
-            <Heading3>Email</Heading3>
-            <Heading3>Whats App</Heading3>
+            <CardWrapper>
+              <CardList
+                image='/img/icon/logo-github.png'
+                text='@farsikogama'
+              ></CardList>
+              <CardList
+                image='/img/icon/logo-linked.png'
+                text='Farsiko Gama'
+              ></CardList>
+              <CardList
+                image='/img/icon/logo-email.png'
+                text='farsikogama@gmail.com'
+              ></CardList>
+            </CardWrapper>
           </ContainerColumn>
         </Section>
         {/* Contact */}

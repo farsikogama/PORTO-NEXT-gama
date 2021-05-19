@@ -9,18 +9,16 @@ body {
     Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
 }
 
-a {
-  color: inherit;
+a,
+a:focus,
+a:active,
+a:target,
+a:hover,
+a:visited {
+  color: white;
   text-decoration: none;
 }
 
 * {
   box-sizing: border-box;
-}
-
-.tes {
-  font-family: 'Lexend', sans-serif;
-  font-weight: 700;
-  line-height: inherit;
-  justify-content: start;
 }
