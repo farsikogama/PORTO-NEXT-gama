@@ -125,13 +125,33 @@ export const ContainerColumn = styled.div`
     flex-basis: 25%;
   }
 `
+export const RoundedDiv = styled.div`
+  width: calc(5rem + 15vw);
+  height: calc(5rem + 15vw);
+  border-radius: 50%;
+  background-image: url('/img/farsiko.jpg');
+  background-size: cover;
+  @media ${device.mobileS} {
+    margin: 80px auto -10px auto;
+  }
+  @media ${device.mobileM} {
+  }
+  @media ${device.mobileL} {
+  }
+  @media ${device.tablet} {
+    margin: auto;
+  }
+  @media ${device.laptop} {
+  }
+`
+
 export const Heading = styled.h1`
   margin-bottom: 30px;
   font-family: 'Lexend', sans-serif;
   font-weight: 600;
   @media ${device.mobileS} {
-    margin: 2vh unset 2vh unset;
-    font-size: calc(2rem + 4.5vw);
+    margin: 1vh unset 2vh unset;
+    font-size: calc(2rem + 2.5vw);
     flex-basis: 90%;
   }
   @media ${device.mobileM} {

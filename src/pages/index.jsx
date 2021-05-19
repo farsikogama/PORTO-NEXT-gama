@@ -3,12 +3,14 @@ import Head from 'next/head'
 // import components
 import CardPorto from '../components/CardPorto'
 import CardList from '../components/CardList'
+import Img from 'next/image'
 
 // styling
 import {
   Section,
   CardWrapper,
   ContainerColumn,
+  RoundedDiv,
   Heading,
   Heading2,
   Heading3,
@@ -26,7 +28,7 @@ export default function Home() {
         {/* Jumbotron */}
         <Section id='home' className='text-center' jumbotron={true}>
           <ContainerColumn>
-            <img src='img/farsiko.jpg' className='rounded-circle my-5 mx-5' />
+            <RoundedDiv />
           </ContainerColumn>
 
           <ContainerColumn>
@@ -97,16 +99,29 @@ export default function Home() {
                 title='Game Center'
                 href='https://binar-gamecenter-next.herokuapp.com/'
                 bg='/img/porto/gamecenter.JPG'
+                line1='Team Project'
+                line2='Build with Next Js, Redux, Express, JWT, Media Handling, Bootstrap'
+                line3='Role - Frontend Lead & Authentication'
+                line4='see more'
               />
               <CardPorto
                 title='Pokedex'
                 href='https://gama-pokedex.herokuapp.com/'
                 bg='/img/porto/pokemon.png'
+                line1='Personal Project'
+                line2='Build with Next Js, Typescript, Pokemon API, Styled Components, Pure CSS'
+                line3='Role - Frontend'
+                line4='see more'
               />
+
               <CardPorto
-                title='Social Media UI Clone'
-                href='https://binar-gamecenter-next.herokuapp.com/'
-                bg='/img/porto/sosmed.JPG'
+                title='Instagram UI Clone'
+                href='https://gama-pokedex.herokuapp.com/'
+                // bg='/img/porto/pokemon.png'
+                line1='On progress'
+                line2=''
+                line3=''
+                line4='see more'
               />
             </CardWrapper>
           </ContainerColumn>
