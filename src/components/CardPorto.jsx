@@ -100,7 +100,7 @@ const LinkExt = styled.a`
 const Card = props => {
   return (
     <>
-      <LinkExt href={props.href}>
+      <LinkExt href={props.href} target='blank'>
         <CardDiv data-aos='fade-up' bg={props.bg}>
           <Heading3>{props.title}</Heading3>
           <BodyText>

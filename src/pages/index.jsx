@@ -3,7 +3,6 @@ import Head from 'next/head'
 // import components
 import CardPorto from '../components/CardPorto'
 import CardList from '../components/CardList'
-import Img from 'next/image'
 
 // styling
 import {
@@ -120,12 +119,12 @@ export default function Home() {
 
               <CardPorto
                 title='Instagram UI Clone'
-                href='https://gama-pokedex.herokuapp.com/'
+                href='/'
                 // bg='/img/porto/pokemon.png'
                 line1='On progress'
                 line2=''
                 line3=''
-                line4='see more'
+                line4=''
               />
             </CardWrapper>
           </ContainerColumn>
