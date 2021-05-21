@@ -1,4 +1,5 @@
 import Head from 'next/head'
+import Link from 'next/link'
 
 // import components
 import CardPorto from '../components/CardPorto'
@@ -43,48 +44,34 @@ export default function Home() {
         <Section id='skills' dark={true}>
           <Heading2>Proficiencies</Heading2>
           <ContainerColumn>
-            <Heading3 style={{ fontWeight: 'bolder' }}>
-              Full Stack Development
-            </Heading3>
+            <Heading3 style={{ fontWeight: 'bolder' }}>Front End</Heading3>
             <CardWrapper>
-              <CardList
-                image='/img/icon/logo-postgres.png'
-                text='PostgreSQL'
-              ></CardList>
-              <CardList
-                image='/img/icon/logo-express.png'
-                text='Express Js'
-              ></CardList>
-              <CardList
-                image='/img/icon/logo-react.png'
-                text='React Js'
-              ></CardList>
-              <CardList
-                image='/img/icon/logo-node.png'
-                text='Node Js'
-              ></CardList>
-            </CardWrapper>
-          </ContainerColumn>
-          <ContainerColumn>
-            <Heading3 style={{ fontWeight: 'bolder' }}>Other Skills</Heading3>
-            <CardWrapper>
-              <CardList image='/img/icon/logo-git.png' text='Git'></CardList>
-              <CardList
-                image='/img/icon/logo-ts.png'
-                text='Typescript'
-              ></CardList>
+              <CardList image='/img/icon/logo-ts.png' text='Typescript' />
+              <CardList image='/img/icon/logo-react.png' text='React Js' />
+              <CardList image='/img/icon/logo-next.png' text='Next Js' />
               <CardList
                 image='/img/icon/logo-styled.png'
                 text='Styled Components'
-              ></CardList>
-              <CardList
-                image='/img/icon/logo-next.png'
-                text='Next Js'
-              ></CardList>
+              />
+            </CardWrapper>
+          </ContainerColumn>
+          <ContainerColumn>
+            <Heading3 style={{ fontWeight: 'bolder' }}>Back End</Heading3>
+            <CardWrapper>
+              <CardList image='/img/icon/logo-postgres.png' text='PostgreSQL' />
+              <CardList image='/img/icon/logo-node.png' text='Node Js' />
+              <CardList image='/img/icon/logo-express.png' text='Express Js' />
+              <CardList image='/img/icon/logo-sequelize.png' text='Sequelize' />
+            </CardWrapper>
+          </ContainerColumn>
+          <ContainerColumn>
+            <Heading3 style={{ fontWeight: 'bolder' }}>Other</Heading3>
+            <CardWrapper>
+              <CardList image='/img/icon/logo-git.png' text='Git' />
               <CardList
                 image='/img/icon/logo-adobe.png'
                 text='Adobe ( Ai & Ps )'
-              ></CardList>
+              />
             </CardWrapper>
           </ContainerColumn>
         </Section>
@@ -169,8 +156,21 @@ export default function Home() {
           <ContainerColumn>
             <Heading2>Reach Me on</Heading2>
             <CardWrapper>
-              <CardList image='/img/icon/logo-github.png' text='@farsikogama' />
-              <CardList image='/img/icon/logo-linked.png' text='Farsiko Gama' />
+              <a href='https://github.com/farsikogama' target='blank'>
+                <CardList
+                  image='/img/icon/logo-github.png'
+                  text='@farsikogama'
+                />
+              </a>
+              <a
+                href='https://www.linkedin.com/in/farsiko-gama-3b819464'
+                target='blank'
+              >
+                <CardList
+                  image='/img/icon/logo-linked.png'
+                  text='Farsiko Gama'
+                />
+              </a>
               <CardList
                 image='/img/icon/logo-email.png'
                 text='farsikogama@gmail.com'
