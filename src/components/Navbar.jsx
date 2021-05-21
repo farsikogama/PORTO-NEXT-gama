@@ -3,7 +3,7 @@ import { Navbar, Nav } from 'react-bootstrap'
 const NavbarComp = () => {
   return (
     <Navbar collapseOnSelect expand='lg' variant='dark' className='navBg'>
-      <Navbar.Brand href='#home'>Farsiko Gama</Navbar.Brand>
+      <Navbar.Brand>Farsiko Gama</Navbar.Brand>
       <Navbar.Toggle aria-controls='responsive-navbar-nav' />
       <Navbar.Collapse id='responsive-navbar-nav'>
         <Nav className='mr-auto'>

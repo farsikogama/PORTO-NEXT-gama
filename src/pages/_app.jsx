@@ -10,7 +10,7 @@ import Layout from '../components/Layout'
 function MyApp({ Component, pageProps }) {
   useEffect(() => {
     Aos.init({
-      delay: 500,
+      delay: 200,
       duration: 1000,
     })
   }, [])
