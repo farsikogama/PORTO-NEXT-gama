@@ -1,9 +1,9 @@
 import Head from 'next/head'
-import Link from 'next/link'
 
 // import components
 import CardPorto from '../components/CardPorto'
 import CardList from '../components/CardList'
+import Navigation from '../components/Navigation'
 
 // styling
 import {
@@ -179,6 +179,10 @@ export default function Home() {
           </ContainerColumn>
         </Section>
         {/* Contact */}
+
+        {/* navigation */}
+        <Navigation />
+        {/* navigation */}
       </main>
     </div>
   )

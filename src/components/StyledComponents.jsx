@@ -144,7 +144,6 @@ export const RoundedDiv = styled.div`
   @media ${device.laptop} {
   }
 `
-
 export const Heading = styled.h1`
   margin-bottom: 30px;
   font-family: 'Lexend', sans-serif;

@@ -15,7 +15,7 @@ const CardDiv = styled.div`
     width: 45vw;
     padding: 15px;
     border-radius: 10px;
-    border: 1px solid white;
+    // border: 1px solid white;
   }
   @media ${device.mobileM} {
   }
