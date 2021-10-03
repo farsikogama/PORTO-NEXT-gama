@@ -56,7 +56,7 @@ const Card = props => {
     <>
       <CardDiv data-aos='fade-up'>
         <Image src={props.image} height='50' width='50' />
-        {/* <Heading3>{props.text}</Heading3> */}
+        <Heading3>{props.text}</Heading3>
       </CardDiv>
     </>
   )

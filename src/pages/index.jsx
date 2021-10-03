@@ -117,7 +117,7 @@ export default function Home() {
 
             <Heading3 className='text-center'>Analytics</Heading3>
             <CardWrapper porto={true}>
-              {/* <CardPorto2
+              <CardPorto2
                 title='MAF Data Studio'
                 bg='/img/porto/MAF.jpg'
                 body='MAF is a new feature that change the GoFood order process from driver ordered by customer to driver ordered by merchant. This feature signifcantly reduce the delivery time since when the driver arrived at the resto, foods are ready to be delivered. However at the launching period, problems occured since only a few merchants are aware of this feature due to learning curve of the merchants. Therefore, MAF Data Studio was launched to monitor which merchant has the highest order lost in daily basis. This dashboard generate daily top merchant in Bandung, Semarang, Yogyakarta, and Solo and directly notifies the account owner so that the account owner can give immediate treatment to the merchant to improve their performance.'
@@ -126,7 +126,7 @@ export default function Home() {
                 title='POI Performance Dashboard'
                 bg='/img/porto/POI.JPG'
                 body='There are indeed several point of interest that generate the highest order for Gojek. In 2019-2020, Gojek aim a very ambitious target to acquire top 5 POIs in Bandung, Semarang, and Yogyakarta. However, its performance (Complete Order, GMV, BCR, and waiting time) need to be closely monitored. Those are the main reason this dashboard was launched. The result form this monitoring activity are we managed to spend the amount of partnership investment wisely and we managed to allocate supply and demand level more accurate based on the seasonality of this top POI.'
-              /> */}
+              />
             </CardWrapper>
           </ContainerColumn>
         </Section>
