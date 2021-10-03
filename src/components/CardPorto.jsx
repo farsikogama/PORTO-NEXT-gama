@@ -104,14 +104,14 @@ const Card = props => {
         <CardDiv data-aos='fade-up' bg={props.bg}>
           <Heading3>{props.title}</Heading3>
           <BodyText>
-            {/* {props.line1}
+            {props.line1}
             <br />
             {props.line2}
             <br />
             {props.line3}
             <br />
             <br />
-            {props.line4} */}
+            {props.line4}
           </BodyText>
         </CardDiv>
       </LinkExt>
