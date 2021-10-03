@@ -2,6 +2,7 @@ import Head from 'next/head'
 
 // import components
 import CardPorto from '../components/CardPorto'
+import CardPorto2 from '../components/CardPorto2'
 import CardList from '../components/CardList'
 import Navigation from '../components/Navigation'
 
@@ -34,7 +35,8 @@ export default function Home() {
           <ContainerColumn>
             <Heading>Farsiko Gama</Heading>
             <Heading3>
-              Web Developer | Story Teller | Illustrator based in Yogyakarta
+              Full Stack Web Developer | Marketer | Analyst <br /> <br />
+              Based in Yogyakarta
             </Heading3>
           </ContainerColumn>
         </Section>
@@ -81,6 +83,7 @@ export default function Home() {
         <Section id='portos' className='text-center'>
           <ContainerColumn>
             <Heading2 className='text-center'>Portofolio</Heading2>
+            <Heading3 className='text-center'>Web Site</Heading3>
             <CardWrapper porto={true}>
               <CardPorto
                 title='Game Center'
@@ -102,13 +105,27 @@ export default function Home() {
               />
 
               <CardPorto
-                title='Instagram UI Clone'
-                href='/'
-                // bg='/img/porto/pokemon.png'
-                line1='On progress'
-                line2=''
-                line3=''
-                line4=''
+                title='Instagram UI Clone - On Progress'
+                href='https://forum-pages.herokuapp.com/'
+                bg='/img/porto/sosmed.jpg'
+                line1='Personal Project'
+                line2='Build with React Js, Dummy API, CSS, '
+                line3='Role - Frontend'
+                line4='see more'
+              />
+            </CardWrapper>
+
+            <Heading3 className='text-center'>Analytics</Heading3>
+            <CardWrapper porto={true}>
+              <CardPorto2
+                title='MAF Data Studio'
+                bg='/img/porto/MAF.JPG'
+                body='MAF is a new feature that change the GoFood order process from driver ordered by customer to driver ordered by merchant. This feature signifcantly reduce the delivery time since when the driver arrived at the resto, foods are ready to be delivered. However at the launching period, problems occured since only a few merchants are aware of this feature due to learning curve of the merchants. Therefore, MAF Data Studio was launched to monitor which merchant has the highest order lost in daily basis. This dashboard generate daily top merchant in Bandung, Semarang, Yogyakarta, and Solo and directly notifies the account owner so that the account owner can give immediate treatment to the merchant to improve their performance.'
+              />
+              <CardPorto2
+                title='POI Performance Dashboard'
+                bg='/img/porto/POI.JPG'
+                body='There are indeed several point of interest that generate the highest order for Gojek. In 2019-2020, Gojek aim a very ambitious target to acquire top 5 POIs in Bandung, Semarang, and Yogyakarta. However, its performance (Complete Order, GMV, BCR, and waiting time) need to be closely monitored. Those are the main reason this dashboard was launched. The result form this monitoring activity are we managed to spend the amount of partnership investment wisely and we managed to allocate supply and demand level more accurate based on the seasonality of this top POI.'
               />
             </CardWrapper>
           </ContainerColumn>
