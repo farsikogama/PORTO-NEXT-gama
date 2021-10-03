@@ -124,7 +124,7 @@ export default function Home() {
               />
               <CardPorto2
                 title='POI Performance Dashboard'
-                bg='/img/porto/POI.JPd'
+                bg='/img/porto/POI.JPG'
                 body='There are indeed several point of interest that generate the highest order for Gojek. In 2019-2020, Gojek aim a very ambitious target to acquire top 5 POIs in Bandung, Semarang, and Yogyakarta. However, its performance (Complete Order, GMV, BCR, and waiting time) need to be closely monitored. Those are the main reason this dashboard was launched. The result form this monitoring activity are we managed to spend the amount of partnership investment wisely and we managed to allocate supply and demand level more accurate based on the seasonality of this top POI.'
               />
             </CardWrapper>
