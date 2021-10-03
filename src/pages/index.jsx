@@ -107,7 +107,7 @@ export default function Home() {
               <CardPorto
                 title='Instagram UI Clone - On Progress'
                 href='https://forum-pages.herokuapp.com/'
-                bg='/img/porto/sosmed.jpg'
+                bg='/img/porto/sosmed.JPG'
                 line1='Personal Project'
                 line2='Build with React Js, Dummy API, CSS, '
                 line3='Role - Frontend'
@@ -119,7 +119,7 @@ export default function Home() {
             <CardWrapper porto={true}>
               <CardPorto2
                 title='MAF Data Studio'
-                bg='/img/porto/MAF.JPG'
+                bg='/img/porto/MAF.jpg'
                 body='MAF is a new feature that change the GoFood order process from driver ordered by customer to driver ordered by merchant. This feature signifcantly reduce the delivery time since when the driver arrived at the resto, foods are ready to be delivered. However at the launching period, problems occured since only a few merchants are aware of this feature due to learning curve of the merchants. Therefore, MAF Data Studio was launched to monitor which merchant has the highest order lost in daily basis. This dashboard generate daily top merchant in Bandung, Semarang, Yogyakarta, and Solo and directly notifies the account owner so that the account owner can give immediate treatment to the merchant to improve their performance.'
               />
               <CardPorto2
