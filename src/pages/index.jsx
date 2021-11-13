@@ -29,8 +29,6 @@ export default function Home() {
       let sectionY = section.getBoundingClientRect()
 
       opacity.style.opacity = (scroll * 4) / (sectionY.top + section_height)
-
-      console.log(scroll, sectionY.top + section_height)
     })
   })
 
