@@ -26,3 +26,7 @@ a:visited {
 .navBg {
   background: #212229;
 }
+
+.opacity {
+  opacity: 0;
+}

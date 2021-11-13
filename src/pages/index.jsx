@@ -1,3 +1,4 @@
+import { useEffect } from 'react'
 import Head from 'next/head'
 
 // import components
@@ -18,6 +19,21 @@ import {
 } from '../components/StyledComponents'
 
 export default function Home() {
+  useEffect(() => {
+    window.addEventListener('scroll', () => {
+      const opacity = document.querySelector('.opacity')
+      const section = document.querySelector('main')
+      let section_height = section.offsetHeight
+
+      let scroll = window.pageYOffset
+      let sectionY = section.getBoundingClientRect()
+
+      opacity.style.opacity = (scroll * 4) / (sectionY.top + section_height)
+
+      console.log(scroll, sectionY.top + section_height)
+    })
+  })
+
   return (
     <div>
       <Head>
@@ -82,7 +98,7 @@ export default function Home() {
         {/* Portofolio */}
         <Section id='portos' className='text-center'>
           <ContainerColumn>
-            <Heading2 className='text-center'>Portofolio</Heading2>
+            <Heading2 className='text-center'>Portfolio</Heading2>
             <Heading3 className='text-center'>Web Site</Heading3>
             <CardWrapper porto={true}>
               <CardPorto
@@ -120,7 +136,7 @@ export default function Home() {
               <CardPorto2
                 title='MAF Data Studio'
                 bg='/img/porto/MAF.jpg'
-                body='MAF is a new feature that change the GoFood order process from driver ordered by customer to driver ordered by merchant. This feature signifcantly reduce the delivery time since when the driver arrived at the resto, foods are ready to be delivered. However at the launching period, problems occured since only a few merchants are aware of this feature due to learning curve of the merchants. Therefore, MAF Data Studio was launched to monitor which merchant has the highest order lost in daily basis. This dashboard generate daily top merchant in Bandung, Semarang, Yogyakarta, and Solo and directly notifies the account owner so that the account owner can give immediate treatment to the merchant to improve their performance.'
+                body='MAF is a new feature that change the GoFood order process from driver ordered by customer to driver ordered by merchant. This feature signifcantly reduce the delivery time of GoFood. However, at the launching period, problems occured. Only a few merchants are aware of this feature. Therefore, MAF Data Studio was launched to monitor which merchant has the highest order lost in daily basis. This dashboard generate daily data and directly notifies the account owner so that the account owner can give immediate treatment to the merchant to improve their performance.'
               />
               <CardPorto2
                 title='POI Performance Dashboard'
@@ -198,7 +214,10 @@ export default function Home() {
         {/* Contact */}
 
         {/* navigation */}
-        <Navigation />
+        <div className='opacity'>
+          <Navigation />
+        </div>
+
         {/* navigation */}
       </main>
     </div>

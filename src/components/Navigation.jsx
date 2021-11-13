@@ -1,3 +1,4 @@
+import { useEffect, useState } from 'react'
 import styled from 'styled-components'
 import { device } from './MediaQueries'
 import Link from 'next/link'
@@ -48,3 +49,20 @@ const Navigation = () => {
 }
 
 export default Navigation
+
+// function Navigation() {
+//   const [count, setCount] = useState(0)
+
+//   useEffect(() => {
+//     document.title = `You clicked ${count} times`
+//   })
+
+//   return (
+//     <div>
+//       <p>You clicked {count} times</p>
+//       <button onClick={() => setCount(count + 1)}>Click me</button>
+//     </div>
+//   )
+// }
+
+// export default Navigation

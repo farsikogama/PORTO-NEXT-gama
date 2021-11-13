@@ -11,7 +11,7 @@ const NavbarComp = () => {
             Skills
           </Nav.Link>
           <Nav.Link className='mx-4' href='#portos'>
-            Portofolio
+            Portfolio
           </Nav.Link>
         </Nav>
         <Nav>
