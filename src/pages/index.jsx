@@ -1,4 +1,4 @@
-import { useEffect } from 'react'
+import { useEffect, useState } from 'react'
 import Head from 'next/head'
 
 // import components
@@ -19,18 +19,20 @@ import {
 } from '../components/StyledComponents'
 
 export default function Home() {
+  const appearNavigation = () => {
+    const opacity = document.querySelector('.opacity')
+    const section = document.querySelector('main')
+    let section_height = section.offsetHeight
+
+    let scroll = window.pageYOffset
+    let sectionY = section.getBoundingClientRect()
+
+    opacity.style.opacity = (scroll * 4) / (sectionY.top + section_height)
+  }
+
   useEffect(() => {
-    window.addEventListener('scroll', () => {
-      const opacity = document.querySelector('.opacity')
-      const section = document.querySelector('main')
-      let section_height = section.offsetHeight
-
-      let scroll = window.pageYOffset
-      let sectionY = section.getBoundingClientRect()
-
-      opacity.style.opacity = (scroll * 4) / (sectionY.top + section_height)
-    })
-  })
+    window.addEventListener('scroll', appearNavigation)
+  }, [])
 
   return (
     <div>
@@ -49,7 +51,7 @@ export default function Home() {
           <ContainerColumn>
             <Heading>Farsiko Gama</Heading>
             <Heading3>
-              Full Stack Web Developer | Marketer | Analyst <br /> <br />
+              Analyst | Marketer | Full Stack Web Developer <br /> <br />
               Based in Yogyakarta
             </Heading3>
           </ContainerColumn>
@@ -97,6 +99,20 @@ export default function Home() {
         <Section id='portos' className='text-center'>
           <ContainerColumn>
             <Heading2 className='text-center'>Portfolio</Heading2>
+            <Heading3 className='text-center'>Analytics</Heading3>
+            <CardWrapper porto={true}>
+              <CardPorto2
+                title='MAF Data Studio'
+                bg='/img/porto/MAF.jpg'
+                body='MAF is a new feature that change the GoFood order process from driver ordered by customer to driver ordered by merchant. This feature signifcantly reduce the delivery time of GoFood. However, at the launching period, problems occured. Only a few merchants are aware of this feature. Therefore, MAF Data Studio was launched to monitor which merchant has the highest order lost in daily basis. This dashboard generate daily data and directly notifies the account owner so that the account owner can give immediate treatment to the merchant to improve their performance.'
+              />
+              <CardPorto2
+                title='POI Performance Dashboard'
+                bg='/img/porto/POI.JPG'
+                body='There are indeed several point of interest that generate the highest order for Gojek. In 2019-2020, Gojek aim a very ambitious target to acquire top 5 POIs in Bandung, Semarang, and Yogyakarta. However, its performance (Complete Order, GMV, BCR, and waiting time) need to be closely monitored. Those are the main reason this dashboard was launched. The result form this monitoring activity are we managed to spend the amount of partnership investment wisely and we managed to allocate supply and demand level more accurate based on the seasonality of this top POI.'
+              />
+            </CardWrapper>
+
             <Heading3 className='text-center'>Web Site</Heading3>
             <CardWrapper porto={true}>
               <CardPorto
@@ -126,20 +142,6 @@ export default function Home() {
                 line2='Build with React Js, Dummy API, CSS, '
                 line3='Role - Frontend'
                 line4='see more'
-              />
-            </CardWrapper>
-
-            <Heading3 className='text-center'>Analytics</Heading3>
-            <CardWrapper porto={true}>
-              <CardPorto2
-                title='MAF Data Studio'
-                bg='/img/porto/MAF.jpg'
-                body='MAF is a new feature that change the GoFood order process from driver ordered by customer to driver ordered by merchant. This feature signifcantly reduce the delivery time of GoFood. However, at the launching period, problems occured. Only a few merchants are aware of this feature. Therefore, MAF Data Studio was launched to monitor which merchant has the highest order lost in daily basis. This dashboard generate daily data and directly notifies the account owner so that the account owner can give immediate treatment to the merchant to improve their performance.'
-              />
-              <CardPorto2
-                title='POI Performance Dashboard'
-                bg='/img/porto/POI.JPG'
-                body='There are indeed several point of interest that generate the highest order for Gojek. In 2019-2020, Gojek aim a very ambitious target to acquire top 5 POIs in Bandung, Semarang, and Yogyakarta. However, its performance (Complete Order, GMV, BCR, and waiting time) need to be closely monitored. Those are the main reason this dashboard was launched. The result form this monitoring activity are we managed to spend the amount of partnership investment wisely and we managed to allocate supply and demand level more accurate based on the seasonality of this top POI.'
               />
             </CardWrapper>
           </ContainerColumn>
